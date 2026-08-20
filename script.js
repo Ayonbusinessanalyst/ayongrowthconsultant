@@ -382,7 +382,119 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ----------------------------------------------------------------------
-    // 9. MOBILE MENU
+    // 9. SANITY CONTENT LOADER
+    // ----------------------------------------------------------------------
+    async function loadSanityContent() {
+        const grid = document.querySelector('.insights-grid');
+        if (!grid) return;
+
+        try {
+            const response = await fetch('/api/portfolio');
+            const data = await response.json();
+
+            if (!Array.isArray(data.items) || data.items.length === 0) {
+                return;
+            }
+
+            const normalizeCategory = (value) => {
+                if (!value) return 'blog';
+                const clean = String(value).toLowerCase().trim();
+                if (clean.includes('case')) return 'case-study';
+                if (clean.includes('video')) return 'video';
+                return 'blog';
+            };
+
+            const cards = data.items.map(item => {
+                const category = normalizeCategory(item.category || item._type);
+                const title = item.title || 'Untitled post';
+                const excerpt = item.excerpt || 'Read the latest update from this project.';
+                const date = item.publishedAt ? new Date(item.publishedAt).toLocaleDateString('en-US', { month: 'short', year: 'numeric' }) : 'Recent';
+                const youtubeId = item.youtubeId || '';
+                const href = item.url || (youtubeId ? '#' : '#');
+                const isVideo = category === 'video' || Boolean(youtubeId);
+
+                if (isVideo) {
+                    return `
+                        <article class="insight-card reveal" data-category="video" data-title="${title}" data-youtube-id="${youtubeId}" data-link="#">
+                            <div class="card-thumb video">
+                                <div class="badge">Video</div>
+                                <img src="https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg" alt="${title}" class="yt-thumb" loading="lazy">
+                                <div class="play-overlay">▶</div>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">${title}</h3>
+                                <p class="card-excerpt">${excerpt}</p>
+                                <div class="card-footer">
+                                    <span class="meta-date">${date}</span>
+                                    <span class="meta-read">Video</span>
+                                    <button class="read-more video-trigger">Watch Now →</button>
+                                </div>
+                            </div>
+                        </article>
+                    `;
+                }
+
+                return `
+                    <article class="insight-card reveal" data-category="${category}" data-title="${title}" data-link="${href}">
+                        <div class="card-thumb">
+                            <div class="badge">${category === 'case-study' ? 'Case Study' : 'Blog'}</div>
+                            <div class="thumb-placeholder">Image</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">${title}</h3>
+                            <p class="card-excerpt">${excerpt}</p>
+                            <div class="card-footer">
+                                <span class="meta-date">${date}</span>
+                                <span class="meta-read">${category === 'case-study' ? 'Case' : 'Article'}</span>
+                                <a href="${href}" class="read-more">Read More →</a>
+                            </div>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+
+            grid.innerHTML = cards;
+
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const insightCards = document.querySelectorAll('.insight-card');
+            filterBtns.forEach(btn => {
+                btn.onclick = () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const filter = btn.getAttribute('data-filter');
+                    insightCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'flex';
+                            card.classList.remove('visible');
+                            setTimeout(() => card.classList.add('visible'), 50);
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                };
+            });
+
+            const newVideoTriggers = document.querySelectorAll('.video-trigger');
+            newVideoTriggers.forEach(trigger => {
+                trigger.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = trigger.closest('[data-youtube-id]');
+                    if (!target) return;
+                    const videoId = target.getAttribute('data-youtube-id');
+                    const iframe = document.getElementById('youtube-iframe');
+                    iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
+                    document.getElementById('youtube-modal').classList.add('active');
+                });
+            });
+        } catch (error) {
+            console.error('Sanity content failed to load:', error);
+        }
+    }
+
+    loadSanityContent();
+
+    // ----------------------------------------------------------------------
+    // 10. MOBILE MENU
     // ----------------------------------------------------------------------
     const hamburger = document.querySelector('.hamburger-menu');
     const mobileNav = document.querySelector('.mobile-nav-overlay');
