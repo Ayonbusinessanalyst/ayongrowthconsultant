@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Ayon — Growth Consultant & Meta Ads Expert</title>
+    <meta name="description" content="I help online businesses scale with data-driven ads and smart marketing strategies that actually convert.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Ahmed Ayon — Growth Consultant & Meta Ads Expert">
+    <meta property="og:description" content="I help online businesses scale with data-driven ads and smart marketing strategies that actually convert.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Md Israk Ahmed Ayon",
+      "jobTitle": "Growth Consultant & Meta Ads Expert",
+      "url": "https://ahmedayon.com"
+    }
+    </script>
+</head>
+<body class="dark-mode">
+    <!--
+    ╔══════════════════════════════════════════════════════╗
+    ║  AHMED AYON PORTFOLIO — EDIT GUIDE                  ║
+    ╠══════════════════════════════════════════════════════╣
+    ║  TO CHANGE YOUR PHOTO:                              ║
+    ║  Replace hero-photo.png and about-photo.png         ║
+    ║  in the /images/ folder. Keep the same filenames.   ║
+    ║                                                      ║
+    ║  TO ADD A BLOG POST OR CASE STUDY:                  ║
+    ║  Duplicate a <article class="insight-card"> block.  ║
+    ║  Update the data-* attributes.                      ║
+    ║  Link to your HTML file: data-link="Blogs/post.html"║
+    ║                                                      ║
+    ║  TO ADD A YOUTUBE VIDEO:                            ║
+    ║  Set data-youtube-id="YOUR_VIDEO_ID" on a card.     ║
+    ║                                                      ║
+    ║  COLORS: Edit CSS variables in :root in styles.css  ║
+    ╚══════════════════════════════════════════════════════╝
+    -->
+
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-logo">AA</div>
+    </div>
+
+    <!-- Sticky Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">AA</a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#proof" class="nav-link">Work</a>
+                <a href="#expertise" class="nav-link">Expertise</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+                <a href="#insights" class="nav-link">Blog</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-right">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <span class="theme-icon moon">☽</span>
+                    <span class="theme-icon sun">☀</span>
+                </button>
+                <button class="hamburger-menu" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay">
+        <div class="mobile-nav-links">
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#proof" class="mobile-nav-link">Work</a>
+            <a href="#expertise" class="mobile-nav-link">Expertise</a>
+            <a href="#reviews" class="mobile-nav-link">Reviews</a>
+            <a href="#insights" class="mobile-nav-link">Blog</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <!-- SECTION 01: HERO -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg-grid"></div>
+            <div class="hero-container">
+                <div class="hero-left">
+                    <div class="hero-tag reveal">Growth Consultant · Meta Ads Expert</div>
+                    <h1 class="hero-name">
+                        <span class="name-line1 reveal glow-text">Ahmed Ayon</span>
+                    </h1>
+                    <div class="hero-role reveal">
+                        Digital Marketer | <span class="typewriter-text"></span><span class="cursor-blink">_</span>
+                    </div>
+                    <p class="hero-hook reveal">
+                        I help online businesses scale with data-driven ads and smart marketing strategies that actually convert.
+                    </p>
+                    <div class="hero-cta-row reveal">
+                        <button class="btn btn-primary" onclick="document.getElementById('quote-modal').classList.add('active')">Hire Me</button>
+                        <a href="https://calendar.app.google/huS7y1GLfwko5Fmp6" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Grab Your Coffee</a>
+                    </div>
+                    <div class="hero-stats reveal">
+                        <div class="stat-box"><span class="stat-number" data-target="50">0</span>+ <span class="stat-label">Clients</span></div>
+                        <div class="stat-box"><span class="stat-number" data-target="3">0</span>M+ <span class="stat-label">Sales Generated</span></div>
+                        <div class="stat-box"><span class="stat-number" data-target="2">0</span>+ <span class="stat-label">Years</span></div>
+                    </div>
+                </div>
+                <div class="hero-right reveal-left">
+                    <div class="photo-container">
+                        <div class="photo-bg-pattern neon-green"></div>
+                        <img src="images/hero-photo.png" alt="Ahmed Ayon" class="hero-photo neon-green">
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll Down</span>
+                <svg viewBox="0 0 24 24" class="chevron"><path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+        </section>
+
+        <!-- SECTION 02: ABOUT ME -->
+        <section id="about" class="about-section">
+            <div class="container about-container">
+                <div class="about-left">
+                    <h2 class="section-title reveal">Hi, I'm Ayon —<br><span class="accent-blue">A Marketing Strategist.</span></h2>
+                    <div class="about-bio reveal">
+                        <span class="bio-line">Hi, I'm Ayon — a marketing strategist turning ideas into a growth system.</span>
+                        <span class="bio-line">I help online businesses scale smarter through data-driven ad campaigns,</span>
+                        <span class="bio-line">creative content strategies, and tailored marketing plans built around real results.</span>
+                    </div>
+                    <div class="about-stats-row reveal">
+                        <div class="stat-box"><span class="stat-number" data-target="50">0</span>+<br><span class="stat-label">Satisfied Clients</span></div>
+                        <div class="stat-box"><span class="stat-number" data-target="3">0</span>M+<br><span class="stat-label">Sales Generated</span></div>
+                        <div class="stat-box"><span class="stat-number" data-target="2">0</span>+<br><span class="stat-label">Years Experience</span></div>
+                    </div>
+                </div>
+                <div class="about-right reveal-left">
+                    <div class="about-photo-wrapper">
+                        <img src="images/about-photo.png" alt="Ahmed Ayon" class="about-photo" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARQUEE DIVIDER -->
+        <div class="marquee-wrapper">
+            <div class="marquee-content">
+                Meta Ads ✦ Content Strategy ✦ Growth Consulting ✦ Tracking Setup ✦ Funnel Building ✦ ROAS Optimization ✦ Business Consulting ✦ Campaign Management ✦ Meta Ads ✦ Content Strategy ✦ Growth Consulting ✦ Tracking Setup ✦ Funnel Building ✦ ROAS Optimization ✦ Business Consulting ✦ Campaign Management ✦
+            </div>
+        </div>
+
+        <!-- SECTION 03: RECENT PROJECTS -->
+        <section id="proof" class="proof-section">
+            <div class="container">
+                <!-- Removed label "// 03 Proof" -->
+                <h2 class="section-title reveal">Recent Work & Results</h2>
+
+                <div class="macos-window reveal full-width-window">
+                    <div class="macos-topbar">
+                        <div class="macos-buttons">
+                            <span class="mac-btn red"></span>
+                            <span class="mac-btn yellow"></span>
+                            <span class="mac-btn green"></span>
+                        </div>
+                        <div class="macos-title">Work / Proof</div>
+                    </div>
+                    <div class="macos-body">
+                        <!-- Left Panel -->
+                        <div class="macos-sidebar">
+                            <button class="nav-item active" data-target="experience">📁 Experience</button>
+                            <button class="nav-item" data-target="case-studies">📄 Case Studies</button>
+                            <button class="nav-item" data-target="video-proof">🎬 WATCH</button>
+                        </div>
+                        
+                        <!-- Center Panel (Now takes full width because Details panel is removed) -->
+                        <div class="macos-content full-width-content">
+                            <!-- Experience -->
+                            <div id="experience" class="content-panel active">
+                                <div class="timeline-item" data-experience="true">
+                                    <div class="timeline-role">Meta Ads Strategist — Client A</div>
+                                    <div class="timeline-date">2023–Present</div>
+                                    <div class="timeline-desc">Scaled ROAS 4x and decreased CPA by 30% through advanced retargeting structures.</div>
+                                </div>
+                                <div class="timeline-item" data-experience="true">
+                                    <div class="timeline-role">Growth Consultant — Client B</div>
+                                    <div class="timeline-date">2022–2023</div>
+                                    <div class="timeline-desc">Built full funnel system resulting in a 200% increase in lead generation.</div>
+                                </div>
+                                <div class="timeline-item" data-experience="true">
+                                    <div class="timeline-role">Content Strategist — Client C</div>
+                                    <div class="timeline-date">2021–2022</div>
+                                    <div class="timeline-desc">300% engagement growth across organic social media channels.</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Case Studies -->
+                            <div id="case-studies" class="content-panel">
+                                <div class="grid-2col">
+                                    <!-- Linking directly to the Case Studies folder HTML files -->
+                                    <div class="case-card" data-title="E-commerce Brand Scale" data-result="4x ROAS" data-link="Case Studies/ecommerce-scale.html">
+                                        <div class="case-img-placeholder">Image</div>
+                                        <div class="case-body">
+                                            <h4 class="case-title">E-commerce Brand Scale</h4>
+                                            <div class="case-result">4x ROAS</div>
+                                            <p class="case-desc">Scaled ad spend from $1k to $10k/mo while maintaining profitability.</p>
+                                            <a href="Case Studies/ecommerce-scale.html" class="btn btn-outline small">Read Case Study</a>
+                                        </div>
+                                    </div>
+                                    <div class="case-card" data-title="Service Business Leads" data-result="-40% CPA" data-link="Case Studies/service-leads.html">
+                                        <div class="case-img-placeholder">Image</div>
+                                        <div class="case-body">
+                                            <h4 class="case-title">Service Business Leads</h4>
+                                            <div class="case-result">-40% CPA</div>
+                                            <p class="case-desc">Optimized lead gen funnel, dropping cost per acquisition significantly.</p>
+                                            <a href="Case Studies/service-leads.html" class="btn btn-outline small">Read Case Study</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Video Proof (WATCH) -->
+                            <div id="video-proof" class="content-panel">
+                                <div class="grid-2col">
+                                    <!-- Add real youtube IDs -->
+                                    <div class="video-card" data-youtube-id="dQw4w9WgXcQ">
+                                        <div class="video-thumb">
+                                            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Video thumbnail" loading="lazy">
+                                            <div class="play-btn">▶</div>
+                                        </div>
+                                        <div class="video-title">Funnel Strategy Breakdown</div>
+                                        <div class="video-date">March 2026</div>
+                                    </div>
+                                    <div class="video-card" data-youtube-id="dQw4w9WgXcQ">
+                                        <div class="video-thumb">
+                                            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Video thumbnail" loading="lazy">
+                                            <div class="play-btn">▶</div>
+                                        </div>
+                                        <div class="video-title">Meta Ads Mastery Session</div>
+                                        <div class="video-date">February 2026</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Removed Right Panel -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 04: EXPERTISE -->
+        <section id="expertise" class="expertise-section">
+            <div class="container">
+                <!-- Removed label "// 04 Expertise" -->
+                <h2 class="section-title reveal">What I Do Best</h2>
+                
+                <div class="expertise-stack">
+                    <div class="expertise-card reveal">
+                        <!-- Removed emoji -->
+                        <h3 class="exp-title">Content Strategy</h3>
+                        <p class="exp-body">Building content systems that grow audiences and drive consistent engagement across platforms.</p>
+                        <div class="exp-tags">
+                            <span class="tag">Social Media</span>
+                            <span class="tag">Content Planning</span>
+                            <span class="tag">Growth</span>
+                        </div>
+                    </div>
+                    <div class="expertise-card reveal">
+                        <h3 class="exp-title">Meta Ad Management</h3>
+                        <p class="exp-body">Meta ad campaigns engineered for maximum ROAS. From creative strategy to pixel-perfect tracking.</p>
+                        <div class="exp-tags">
+                            <span class="tag">Meta Ads</span>
+                            <span class="tag">Campaign Strategy</span>
+                            <span class="tag">ROAS Optimization</span>
+                        </div>
+                    </div>
+                    <div class="expertise-card reveal">
+                        <h3 class="exp-title">Business Consultancy</h3>
+                        <p class="exp-body">Private 1:1 strategy sessions to unlock bottlenecks, build systems, and accelerate your business growth.</p>
+                        <div class="exp-tags">
+                            <span class="tag">1:1 Sessions</span>
+                            <span class="tag">Growth Strategy</span>
+                            <span class="tag">Consulting</span>
+                        </div>
+                    </div>
+                    <div class="expertise-card reveal">
+                        <h3 class="exp-title">Tracking Setup</h3>
+                        <p class="exp-body">Complete analytics and conversion tracking implementation. Know exactly what's working and what needs fixing.</p>
+                        <div class="exp-tags">
+                            <span class="tag">Meta Pixel</span>
+                            <span class="tag">GA4</span>
+                            <span class="tag">Conversion API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 05: CLIENT REVIEWS -->
+        <section id="reviews" class="reviews-section">
+            <div class="container">
+                <h2 class="section-title reveal">What Clients Say</h2>
+
+                <div class="reviews-grid">
+                    <!-- Left: Text Reviews -->
+                    <div class="reviews-col left-col">
+                        <div class="review-card text-review reveal" data-review-text="Ayon transformed our ad strategy. We saw a 3x increase in leads within the first month. Absolutely brilliant to work with!" data-client-name="Sarah J." data-client-role="E-commerce Founder">
+                            <div class="stars">★★★★★</div>
+                            <p class="quote">"Ayon transformed our ad strategy. We saw a 3x increase in leads within the first month..."</p>
+                            <div class="client-info">
+                                <div class="client-name">Sarah J.</div>
+                                <div class="client-role">E-commerce Founder</div>
+                            </div>
+                        </div>
+                        <div class="review-card text-review reveal" data-review-text="The tracking setup was flawless. Finally, we know exactly where our sales are coming from. Highly recommend his consulting services." data-client-name="Mark T." data-client-role="Service Business Owner">
+                            <div class="stars">★★★★★</div>
+                            <p class="quote">"The tracking setup was flawless. Finally, we know exactly where our sales are coming from..."</p>
+                            <div class="client-info">
+                                <div class="client-name">Mark T.</div>
+                                <div class="client-role">Service Business Owner</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Center: Featured Review -->
+                    <div class="reviews-col center-col">
+                        <div class="review-card featured-review reveal">
+                            <div class="stars">★★★★★</div>
+                            <h3 class="featured-quote">"Ahmed is a growth machine. Our ROAS went from 1.5 to 4.2 in just two months under his management."</h3>
+                            <div class="client-profile">
+                                <div class="avatar-placeholder">D</div>
+                                <div class="client-details">
+                                    <div class="client-name">David L.</div>
+                                    <div class="client-role">CEO, TechStartup</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Two Video Reviews (Replaced Image Review) -->
+                    <div class="reviews-col right-col">
+                        <div class="review-card video-review reveal" data-youtube-id="dQw4w9WgXcQ">
+                            <div class="video-thumb-small">
+                                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg" alt="Video review" loading="lazy">
+                                <div class="play-btn small">▶</div>
+                            </div>
+                            <div class="video-caption">Video Testimonial — Client A</div>
+                        </div>
+                        <div class="review-card video-review reveal" data-youtube-id="dQw4w9WgXcQ">
+                            <div class="video-thumb-small">
+                                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg" alt="Video review" loading="lazy">
+                                <div class="play-btn small">▶</div>
+                            </div>
+                            <div class="video-caption">Video Testimonial — Client B</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 06: BLOG & CASE STUDIES -->
+        <section id="insights" class="insights-section">
+            <div class="container">
+                <h2 class="section-title reveal">Blog & Case Studies</h2>
+
+                <div class="filter-tabs reveal">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="blog">Blog Posts</button>
+                    <button class="filter-btn" data-filter="case-study">Case Studies</button>
+                    <button class="filter-btn" data-filter="video">Videos</button>
+                </div>
+
+                <div class="insights-grid">
+                    <!-- Linking to Case Studies folder -->
+                    <article class="insight-card reveal" data-category="case-study" data-title="How I Scaled an E-commerce Brand to 4x ROAS" data-link="Case Studies/ecommerce-4x-roas.html">
+                        <div class="card-thumb">
+                            <div class="badge">Case Study</div>
+                            <div class="thumb-placeholder">Image</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">How I Scaled an E-commerce Brand to 4x ROAS</h3>
+                            <p class="card-excerpt">A deep dive into the exact funnel, ad creatives, and targeting strategy used to quadruple return on ad spend.</p>
+                            <div class="card-footer">
+                                <span class="meta-date">May 2026</span>
+                                <span class="meta-read">5 min read</span>
+                                <a href="Case Studies/ecommerce-4x-roas.html" class="read-more">Read More →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Linking to Blogs folder -->
+                    <article class="insight-card reveal" data-category="blog" data-title="The Meta Ads Strategy That Actually Works in 2026" data-link="Blogs/meta-ads-strategy.html">
+                        <div class="card-thumb">
+                            <div class="badge">Blog</div>
+                            <div class="thumb-placeholder">Image</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">The Meta Ads Strategy That Actually Works in 2026</h3>
+                            <p class="card-excerpt">Stop wasting money on outdated tactics. Here is the modern approach to Meta Ads that algorithm favors today.</p>
+                            <div class="card-footer">
+                                <span class="meta-date">April 2026</span>
+                                <span class="meta-read">4 min read</span>
+                                <a href="Blogs/meta-ads-strategy.html" class="read-more">Read More →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Video YouTube Embed link logic (same as before) -->
+                    <article class="insight-card reveal" data-category="video" data-youtube-id="dQw4w9WgXcQ" data-title="Full Funnel Marketing Breakdown" data-link="#">
+                        <div class="card-thumb video">
+                            <div class="badge">Video</div>
+                            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Video thumbnail" class="yt-thumb" loading="lazy">
+                            <div class="play-overlay">▶</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Full Funnel Marketing Breakdown (Watch)</h3>
+                            <p class="card-excerpt">Watch over my shoulder as I build a complete conversion funnel from scratch in this masterclass.</p>
+                            <div class="card-footer">
+                                <span class="meta-date">March 2026</span>
+                                <span class="meta-read">20 min watch</span>
+                                <button class="read-more video-trigger">Watch Now →</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 07: FINAL CTA -->
+        <section id="contact" class="cta-section">
+            <div class="cta-bg"></div>
+            <div class="container cta-container reveal">
+                <h2 class="cta-title">
+                    <span class="line1">Ready to Grow</span><br>
+                    <span class="line2 glow-text">Your Business?</span>
+                </h2>
+                <p class="cta-subtext">Let's build a strategy that actually delivers results.</p>
+                <div class="cta-buttons">
+                    <button id="btn-get-quote" class="btn btn-primary large">Get a Quote</button>
+                    <a href="https://calendar.app.google/huS7y1GLfwko5Fmp6" target="_blank" rel="noopener noreferrer" class="btn btn-outline large">Book a Coffee Chat</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">AA</div>
+                <p>&copy; 2026 Ahmed Ayon. All rights reserved.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#linkedin" class="social-link" target="_blank">LinkedIn</a>
+                <a href="#instagram" class="social-link" target="_blank">Instagram</a>
+                <a href="#facebook" class="social-link" target="_blank">Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS -->
+
+    <!-- Quote Request Modal -->
+    <div id="quote-modal" class="modal-overlay">
+        <div class="modal-box">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h3 class="modal-title">Request a Quote</h3>
+            <p class="modal-desc">Fill out the details below and I'll get back to you within 24 hours.</p>
+            <form id="quote-form" class="apple-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="form-name">Name</label>
+                    <input type="text" id="form-name" name="Name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="form-email">Email</label>
+                    <input type="email" id="form-email" name="Email" required placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="form-business">Business Type</label>
+                    <select id="form-business" name="Business Type" required>
+                        <option value="">Select an option</option>
+                        <option value="ecommerce">E-commerce</option>
+                        <option value="service">Service Business</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="form-budget">Monthly Ad Budget</label>
+                    <select id="form-budget" name="Budget" required>
+                        <option value="">Select range</option>
+                        <option value="1k-5k">$1k - $5k</option>
+                        <option value="5k-10k">$5k - $10k</option>
+                        <option value="10k+">$10k+</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="form-message">Message / Goals</label>
+                    <textarea id="form-message" name="Message" rows="4" required placeholder="Tell me about your current situation and goals..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary full-width submit-btn">Send Request</button>
+            </form>
+            <div id="form-success" class="form-success hidden">
+                <div class="success-icon">✓</div>
+                <h4>Request Sent!</h4>
+                <p>Thanks! I'll be in touch within 24h.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review Read Modal -->
+    <div id="review-modal" class="modal-overlay">
+        <div class="modal-box">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="stars">★★★★★</div>
+            <p id="modal-review-text" class="modal-quote"></p>
+            <div class="client-info">
+                <div id="modal-review-client" class="client-name"></div>
+                <div id="modal-review-role" class="client-role"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- YouTube Lightbox Modal -->
+    <div id="youtube-modal" class="modal-overlay">
+        <div class="modal-box video-box">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="iframe-container">
+                <iframe id="youtube-iframe" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
