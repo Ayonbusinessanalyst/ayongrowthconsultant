@@ -1,0 +1,16 @@
+[build]
+  command = "npm install"
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/api/portfolio"
+  to = "/.netlify/functions/portfolio"
+  status = 200
+
+[[redirects]]
+  from = "/api/sanity-config"
+  to = "/.netlify/functions/sanity-config"
+  status = 200
